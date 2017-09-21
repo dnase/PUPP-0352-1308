@@ -13,6 +13,13 @@ class profile::webapp {
     ensure => present,
   }
 
+  file { '/var/www/html':
+    ensure => directory,
+    owner  => 'wordpress',
+    group  => 'wordpress',
+    mode   => '0775',
+  }
+
   class { 'wordpress':
     install_dir => '/var/www/html',
     wp_owner    => 'wordpress',
