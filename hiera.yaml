@@ -6,6 +6,6 @@
   :datadir: /etc/puppetlabs/code/hieradata
 
 :hierarchy:
-  - "%{::trusted.certname}"
+  - "%{clientcert}"
   - "%{environment}"
   - common

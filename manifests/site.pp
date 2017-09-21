@@ -29,4 +29,5 @@ node default {
   #   class { 'my_class': }
   include role::classroom
   include system::classroom
+  notify { "The message is ${hiera('message')}": }
 }
